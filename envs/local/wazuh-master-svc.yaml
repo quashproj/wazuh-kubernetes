@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: wazuh  # Don't change, unless you update the Wazuh dashboard app config
+  namespace: wazuh
+spec:
+  type: LoadBalancer
+  # Expose fixed node ports
+  ports:
+    - name: agent
+      port: 1514
+      targetPort: 1514
+    - name: registration
+      port: 1515
+      targetPort: 1515
+    - name: api
+      port: 55000
+      targetPort: 55000
+
