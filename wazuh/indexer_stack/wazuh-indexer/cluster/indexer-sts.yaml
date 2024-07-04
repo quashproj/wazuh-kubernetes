@@ -62,11 +62,11 @@ spec:
           image: 'wazuh/wazuh-indexer:4.7.3'
           resources:
             limits:
-              cpu: 500m
-              memory: 1564Mi
+              cpu: 1000m
+              memory: 4Gi
           env:
             - name: OPENSEARCH_JAVA_OPTS
-              value: '-Xms3184m -Xmx3184m -Dlog4j2.formatMsgNoLookups=true'
+              value: '-Xms3200m -Xmx3200m -Dlog4j2.formatMsgNoLookups=true'
             - name: CLUSTER_NAME
               value: wazuh
             - name: NETWORK_HOST
