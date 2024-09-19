@@ -43,7 +43,7 @@ configMapGenerator:
       - indexer_stack/wazuh-dashboard/dashboard_conf/opensearch_dashboards.yml
 
 resources:
-  - base/wazuh-ns.yaml
+  # Create it manually - base/wazuh-ns.yaml
   - base/storage-class.yaml
 
   - secrets/wazuh-api-cred-secret.yaml
